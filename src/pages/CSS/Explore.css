@@ -1,34 +1,7 @@
-.container-explore-foods-drinks {
-  display: flex;
-  flex-direction: column;
-  margin-top: 120px;
-}
-
 .container-explore-foods-drinks-header-card-footer {
-  align-items: center;
   background-image: url('/home/flavio/Trybe-projects/sd-019-c-project-recipes-app/src/images/Logo/walpapers.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-
-  /* back */
-  display: flex;
-  flex-direction: column;
-  height: 670px;
-  justify-content: center;
-  width: 380px;
-}
-
-.container-explore-foods-drinks-header {
-  align-items: center;
-  background-color: rgb(49, 108, 82);
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 70px;
-  width: 380px;
 }
 
 .container-explore-buttons {
@@ -36,10 +9,11 @@
   background: rgba(240, 255, 246, 0.717);
   display: flex;
   flex-direction: column;
-  height: 880px;
+  height: 560px;
   justify-content: space-evenly;
-  margin: 0;
-  width: 380px;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  width: 360px;
 }
 
 .btn-explore {
@@ -72,7 +46,11 @@
 }
 
 .edge {
-  background: linear-gradient(to left, rgb(49, 108, 82)  0%, rgb(95, 194, 140) 8%, rgb(95, 194, 140) 92%, rgb(49, 108, 82)  100%);
+
+  /* background: linear-gradient(to left, rgb(49, 108, 82)  0%,
+   rgb(95, 194, 140) 8%,
+    rgb(95, 194, 140) 92%,
+     rgb(49, 108, 82)  100%); */
   border-radius: 12px;
   height: 100%;
   left: 0;
@@ -82,7 +60,11 @@
 }
 
 .edge-surprise {
-  background: linear-gradient(to left, rgb(254, 100, 70)  0%, rgb(254, 145, 80) 8%, rgb(254, 145, 80) 92%, rgb(254, 100, 70)  100%);
+
+  /* background: linear-gradient(to left, rgb(254, 100, 70)  0%,
+   rgb(254, 145, 80) 8%,
+    rgb(254, 145, 80) 92%,
+     rgb(254, 100, 70)  100%); */
   border-radius: 12px;
   height: 100%;
   left: 0;
@@ -170,23 +152,30 @@
   outline: none;
 }
 
-/* explore Nationality */
+/* !explore Nationality */
+.container-explore-foods-nationality-header-card-footer {
+  background-image: url('/home/flavio/Trybe-projects/sd-019-c-project-recipes-app/src/images/Logo/walpapers.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .container-card-recipes-nationality {
-  background-color: rgba(245, 245, 245, 0.654);
-  height: 559px;
-  margin-top: 110px;
+  background: rgba(240, 255, 246, 0.717);
+  height: 600px;
   overflow-y: scroll;
-  width: 380px;
+
 }
 
 .container-recipes-card-nationality {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding-bottom: 15px;
-  padding-top: 10px;
-  width: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+  padding-top: 150px;
+  width: 360px;
 }
+
 
 .container-recipes-card-button-nationality {
   align-items: center;
@@ -194,12 +183,12 @@
   /* backdrop-filter: blur(5px); */
   background-color: rgba(245, 245, 245, 0.654);
   display: flex;
-  height: 59.3px;
+  height: 60px;
   justify-content: center;
   margin: 0;
   position: fixed;
-  top: 172px;
-  width: 380px;
+  top: 100px;
+  width: 360px;
   z-index: 0;
 }
 

@@ -43,10 +43,8 @@ function ExploreFoodsNationalities() {
 
   return (
     <div className="container-explore-foods-drinks">
-      <div className="container-explore-foods-drinks-header-card-footer">
-        <div className="container-explore-foods-drinks-header">
-          <Header title="Explore Nationalities" toHaveSearch={ false } />
-        </div>
+      <div className="container-explore-foods-nationality-header-card-footer">
+        <Header title="Explore Nationalities" toHaveSearch />
         <div className="container-recipes-card-button-nationality">
           <select
             className="Select_Nationality"

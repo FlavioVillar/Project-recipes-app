@@ -6,10 +6,8 @@ import './CSS/SearchBar.css';
 
 function SearchBarFoods({ searchValue }) {
   const {
-    // radioSelected,
     setRadioSelected,
     setIngredientValue,
-    // ingredientValue,
   } = useContext(MyContext);
   const [radioValue, setRadioValue] = useState('');
   const history = useHistory();

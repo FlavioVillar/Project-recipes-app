@@ -121,7 +121,7 @@ function FoodsInProgress() {
 
   return (
     <div className="container-id-recipes-geral">
-      <div className="second-id-recipes">
+      <div className="logo-id-recipes">
         <img
           className="Logo_photo_id_recipes"
           src={ Logo }
@@ -132,47 +132,46 @@ function FoodsInProgress() {
           src={ LogoTexto }
           alt="Logo Texto"
         />
-
-        <div className="container-id-recipes">
-          {recipes?.map((item, index) => (
-            <div key={ index } className="id-recipe-card">
-              <div className="container-id-recipes-title" key={ item.idMeal }>
-                <img
-                  data-testid="recipe-photo"
-                  src={ item.strMealThumb }
-                  alt={ item.strMeal }
-                />
-                <h3 data-testid="recipe-title">{item.strMeal}</h3>
-                <div className="container-id-recipe-share-like">
-                  <LinkFavoriteRecipes />
-                  <ShareRecipes testid="share-btn" />
-                </div>
-              </div>
-
-              <p data-testid="recipe-category">{item.strCategory}</p>
-              <div className="container-id-recipe-ingredients-check">
-                {handleIngredient().map((list) => list)}
-              </div>
-              <div className="container-id-recipe-instructions">
-                <p data-testid="instructions">{item.strInstructions}</p>
+      </div>
+      <div className="second-id-recipes">
+        {recipes?.map((item, index) => (
+          <div key={ index } className="id-recipe-card">
+            <div className="container-id-recipes-title" key={ item.idMeal }>
+              <img
+                data-testid="recipe-photo"
+                src={ item.strMealThumb }
+                alt={ item.strMeal }
+              />
+              <h3 data-testid="recipe-title">{item.strMeal}</h3>
+              <div className="container-id-recipe-share-like">
+                <LinkFavoriteRecipes />
+                <ShareRecipes testid="share-btn" />
               </div>
             </div>
-          ))}
-          <div
-            disabled={ isDisabled }
-            className="container-id-recipes-btn-in-progress"
-          >
-            <button
-              data-testid="finish-recipe-btn"
-              className="finish-recipe-btn-in-progress"
-              type="button"
-              disabled={ isDisabled }
-              onClick={ handleDoneRecipe }
-            >
-              Finish Recipe
-            </button>
+
+            <p data-testid="recipe-category">{item.strCategory}</p>
+            <div className="container-id-recipe-ingredients-check">
+              {handleIngredient().map((list) => list)}
+            </div>
+            <div className="container-id-recipe-instructions">
+              <p data-testid="instructions">{item.strInstructions}</p>
+            </div>
           </div>
-        </div>
+        ))}
+      </div>
+      <div
+        disabled={ isDisabled }
+        className="container-id-recipes-btn-in-progress"
+      >
+        <button
+          data-testid="finish-recipe-btn"
+          className="finish-recipe-btn-in-progress"
+          type="button"
+          disabled={ isDisabled }
+          onClick={ handleDoneRecipe }
+        >
+          Finish Recipe
+        </button>
       </div>
     </div>
   );

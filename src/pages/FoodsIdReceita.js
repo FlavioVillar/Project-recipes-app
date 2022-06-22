@@ -57,7 +57,7 @@ function FoodsIdReceita() {
 
   return (
     <div className="container-id-recipes-geral">
-      <div className="second-id-recipes">
+      <div className="logo-id-recipes">
         <img
           className="Logo_photo_id_recipes"
           src={ Logo }
@@ -68,68 +68,67 @@ function FoodsIdReceita() {
           src={ LogoTexto }
           alt="Logo Texto"
         />
-
-        <div className="container-id-recipes">
-          {recipes?.map((item, index) => (
-            <div key={ index } className="id-recipe-card">
-              <div className="container-id-recipes-title" key={ item.idMeal }>
-                <img
-                  data-testid="recipe-photo"
-                  src={ item.strMealThumb }
-                  alt={ item.strMeal }
-                />
-                <h3 data-testid="recipe-title">{item.strMeal}</h3>
-                <div className="container-id-recipe-share-like">
-                  <LinkFavoriteRecipes />
-                  <ShareRecipes testid="share-btn" />
-                </div>
-              </div>
-
-              <p data-testid="recipe-category">{item.strCategory}</p>
-              <div className="container-id-recipe-ingredients">
-                <ul>
-                  {handleIngredient().map((list) => list)}
-                </ul>
-              </div>
-              <div className="container-id-recipe-instructions">
-                <p data-testid="instructions">{item.strInstructions}</p>
-              </div>
-              <iframe
-                data-testid="video"
-                src={ replaceAll(item.strYoutube, '/watch?v=', '/embed/') }
-                allowFullScreen
-                title={ item.strMeal }
+      </div>
+      <div className="second-id-recipes">
+        {recipes?.map((item, index) => (
+          <div key={ index } className="id-recipe-card">
+            <div className="container-id-recipes-title" key={ item.idMeal }>
+              <img
+                data-testid="recipe-photo"
+                src={ item.strMealThumb }
+                alt={ item.strMeal }
               />
-              <RecomendationDrinksCard index={ index } />
+              <h3 data-testid="recipe-title">{item.strMeal}</h3>
+              <div className="container-id-recipe-share-like">
+                <LinkFavoriteRecipes />
+                <ShareRecipes testid="share-btn" />
+              </div>
             </div>
-          ))}
-          <div className="container-id-recipes-btn">
-            {!isDone && (
-              <button
-                className="start-recipe-btn"
-                data-testid="start-recipe-btn"
-                type="button"
-                onClick={ () => history.push(`/foods/${id}/in-progress`) }
-              >
-                {isInProgress
-                  ? 'Continue Recipe'
-                  : 'Start Recipe'}
-              </button>
-            )}
-            {isDone && (
 
-              <button
-                className="recipe-done-btn"
-                type="button"
-                onClick={ () => history.push('/done-recipes') }
-              >
-                <span> Finished Recipe</span>
-                <br />
-                GO Done recipes
-              </button>
-            )}
+            <p data-testid="recipe-category">{item.strCategory}</p>
+            <div className="container-id-recipe-ingredients">
+              <ul>
+                {handleIngredient().map((list) => list)}
+              </ul>
+            </div>
+            <div className="container-id-recipe-instructions">
+              <p data-testid="instructions">{item.strInstructions}</p>
+            </div>
+            <iframe
+              data-testid="video"
+              src={ replaceAll(item.strYoutube, '/watch?v=', '/embed/') }
+              allowFullScreen
+              title={ item.strMeal }
+            />
+            <RecomendationDrinksCard index={ index } />
           </div>
-        </div>
+        ))}
+      </div>
+      <div className="container-id-recipes-btn">
+        {!isDone && (
+          <button
+            className="start-recipe-btn"
+            data-testid="start-recipe-btn"
+            type="button"
+            onClick={ () => history.push(`/foods/${id}/in-progress`) }
+          >
+            {isInProgress
+              ? 'Continue Recipe'
+              : 'Start Recipe'}
+          </button>
+        )}
+        {isDone && (
+
+          <button
+            className="recipe-done-btn"
+            type="button"
+            onClick={ () => history.push('/done-recipes') }
+          >
+            <span> Finished Recipe</span>
+            <br />
+            GO Done recipes
+          </button>
+        )}
       </div>
     </div>
   );

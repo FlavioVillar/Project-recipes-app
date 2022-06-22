@@ -52,7 +52,7 @@ function DrinksIdReceita() {
 
   return (
     <div className="container-id-recipes-geral">
-      <div className="second-id-recipes">
+      <div className="logo-id-recipes">
         <img
           className="Logo_photo_id_recipes"
           src={ Logo }
@@ -63,61 +63,61 @@ function DrinksIdReceita() {
           src={ LogoTexto }
           alt="Logo Texto"
         />
-        <div className="container-id-recipes">
-          {recipes?.map((item, index) => (
-            <div key={ item.idDrink } className="id-recipe-card">
-              <div className="container-id-recipes-title" key={ item.idDrink }>
-                <img
-                  data-testid="recipe-photo"
-                  src={ item.strDrinkThumb }
-                  alt={ item.strDrink }
-                />
-                <h3 data-testid="recipe-title">{item.strDrink}</h3>
-                <div className="container-id-recipe-share-like">
-                  <LinkFavoriteRecipes />
-                  <ShareRecipes testid="share-btn" />
-                </div>
+      </div>
+      <div className="second-id-recipes">
+        {recipes?.map((item, index) => (
+          <div key={ item.idDrink } className="id-recipe-card">
+            <div className="container-id-recipes-title" key={ item.idDrink }>
+              <img
+                data-testid="recipe-photo"
+                src={ item.strDrinkThumb }
+                alt={ item.strDrink }
+              />
+              <h3 data-testid="recipe-title">{item.strDrink}</h3>
+              <div className="container-id-recipe-share-like">
+                <LinkFavoriteRecipes />
+                <ShareRecipes testid="share-btn" />
               </div>
-
-              <p data-testid="recipe-category">{item.strAlcoholic}</p>
-              <div className="container-id-recipe-ingredients">
-                <ul>
-                  {handleIngredient().map((list) => list)}
-                </ul>
-              </div>
-              <div className="container-id-recipe-instructions">
-                <p data-testid="instructions">{item.strInstructions}</p>
-              </div>
-              <RecomendationFoodsCard index={ index } />
             </div>
-          ))}
-          <div className="container-id-recipes-btn">
-            {!isDone && (
-              <button
-                data-testid="start-recipe-btn"
-                className="start-recipe-btn"
-                type="button"
-                onClick={ () => history.push(`/drinks/${id}/in-progress`) }
-              >
-                {isInProgress
-                  ? 'Continue Recipe'
-                  : 'Start Recipe'}
-              </button>
-            )}
-            {isDone && (
 
-              <button
-                className="recipe-done-btn"
-                type="button"
-                onClick={ () => history.push('/done-recipes') }
-              >
-                <span> Finished Recipe</span>
-                <br />
-                GO Done recipes
-              </button>
-            )}
+            <p data-testid="recipe-category">{item.strAlcoholic}</p>
+            <div className="container-id-recipe-ingredients">
+              <ul>
+                {handleIngredient().map((list) => list)}
+              </ul>
+            </div>
+            <div className="container-id-recipe-instructions">
+              <p data-testid="instructions">{item.strInstructions}</p>
+            </div>
+            <RecomendationFoodsCard index={ index } />
           </div>
-        </div>
+        ))}
+      </div>
+      <div className="container-id-recipes-btn">
+        {!isDone && (
+          <button
+            data-testid="start-recipe-btn"
+            className="start-recipe-btn"
+            type="button"
+            onClick={ () => history.push(`/drinks/${id}/in-progress`) }
+          >
+            {isInProgress
+              ? 'Continue Recipe'
+              : 'Start Recipe'}
+          </button>
+        )}
+        {isDone && (
+
+          <button
+            className="recipe-done-btn"
+            type="button"
+            onClick={ () => history.push('/done-recipes') }
+          >
+            <span> Finished Recipe</span>
+            <br />
+            GO Done recipes
+          </button>
+        )}
       </div>
     </div>
   );

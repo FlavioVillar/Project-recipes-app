@@ -12,10 +12,8 @@ function Profile() {
   return (
     <div className="container-explore-foods-drinks">
       <div className="container-explore-foods-drinks-header-card-footer">
-        <div className="container-explore-foods-drinks-header">
-          <Header title="Profile" toHaveSearch={ false } />
-          { getEmail ? (<p data-testid="profile-email">{getEmail.email}</p>) : '' }
-        </div>
+        <Header title="Profile" toHaveSearch={ false } />
+        { getEmail ? (<p data-testid="profile-email">{getEmail.email}</p>) : '' }
         <div className="container-favorite-buttons">
           <button
             className="btn-explore"
@@ -43,7 +41,7 @@ function Profile() {
             <span className="shadow" />
             <span className="edge" />
             <span className="front text">
-              Favorite Recipe
+              Favorite Recipes
             </span>
 
           </button>

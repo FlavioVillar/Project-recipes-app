@@ -13,12 +13,10 @@ function Foods() {
   };
 
   return (
-    <div className="container-foods-drinks">
-      <div className="container-foods-drinks-header-card-footer">
-        <Header title="Foods" toHaveSearch />
-        <FoodsRecipesCard getIngredients={ getIngredients } />
-        <Footer />
-      </div>
+    <div className="container-foods-drinks-header-card-footer">
+      <Header title="Foods" toHaveSearch />
+      <FoodsRecipesCard getIngredients={ getIngredients } />
+      <Footer />
     </div>
   );
 }

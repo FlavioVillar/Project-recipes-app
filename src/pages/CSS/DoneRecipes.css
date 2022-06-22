@@ -3,17 +3,24 @@
   background: url('/home/flavio/Trybe-projects/sd-019-c-project-recipes-app/src/images/Logo/walpapers.jpg');
   background-repeat: no-repeat;
   background-size: cover , 100px;
-  border-radius: 38px 42px 42px 48px;
   display: flex;
   flex-direction: column;
-  height: 810px;
-  margin-top: 39px;
-  width: 381px;
+  height: 560px;
+  overflow: hidden;
+  width: 360px;
 }
 
-.container-done-recipes-header {
+.filter-done-recipes {
+  backdrop-filter: blur(2px);
+  background: rgba(221, 221, 221, 0.309);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0;
   position: fixed;
-  top: 70px;
+  top: 100px;
+  width: 360px;
+  z-index: 1;
 }
 
 .second-done-recipes {
@@ -21,11 +28,11 @@
   background-color: rgba(221, 221, 221, 0.887);
   display: flex;
   flex-wrap: wrap;
-  height: 620px;
+  height: 560px;
   justify-content: center;
+  margin-top: 130px;
   overflow-y: scroll;
-  padding: 10px 20px;
-  width: 381px;
+  width: 360px;
 }
 
 ::-webkit-scrollbar {
@@ -59,7 +66,14 @@
   background-color: rgba(221, 221, 221, 0.53);
   border: rgb(95, 194, 140) solid 2px;
   border-radius: 10px;
-  box-shadow: rgba(95, 194, 140, 0.141)  0 -36px 30px 0 inset , rgba(0, 0, 0, 0.1) 0 -79px 40px 0 inset , rgba(0, 0, 0, 0.06) 0 2px 1px , rgba(0, 0, 0, 0.09) 0 4px 2px , rgba(0, 0, 0, 0.09) 0 8px 4px , rgba(0, 0, 0, 0.09) 0 16px 8px , rgba(0, 0, 0, 0.09) 0 32px 16px;
+
+  /* box-shadow: rgba(95, 194, 140, 0.141)  0 -36px 30px 0 inset ,
+  rgba(0, 0, 0, 0.1) 0 -79px 40px 0 inset ,
+  rgba(0, 0, 0, 0.06) 0 2px 1px ,
+  rgba(0, 0, 0, 0.09) 0 4px 2px ,
+  rgba(0, 0, 0, 0.09) 0 8px 4px ,
+  rgba(0, 0, 0, 0.09) 0 16px 8px ,
+  rgba(0, 0, 0, 0.09) 0 32px 16px; */
   display: flex;
   flex-wrap: wrap;
   height: 120px;
@@ -167,7 +181,11 @@
 }
 
 .edge-done {
-  background: linear-gradient(to left, rgb(49, 108, 82)  0%, rgb(95, 194, 140) 8%, rgb(95, 194, 140) 92%, rgb(49, 108, 82)  100%);
+
+  /* background: linear-gradient(to left, rgb(49, 108, 82)  0%,
+   rgb(95, 194, 140) 8%,
+    rgb(95, 194, 140) 92%,
+     rgb(49, 108, 82)  100%); */
   border-radius: 12px;
   height: 100%;
   left: 0;
@@ -266,7 +284,14 @@
   background-color: rgba(221, 221, 221, 0.53);
   border: rgb(95, 194, 140) solid 2px;
   border-radius: 10px;
-  box-shadow: rgba(95, 194, 140, 0.141)  0 -36px 30px 0 inset , rgba(0, 0, 0, 0.1) 0 -79px 40px 0 inset , rgba(0, 0, 0, 0.06) 0 2px 1px , rgba(0, 0, 0, 0.09) 0 4px 2px , rgba(0, 0, 0, 0.09) 0 8px 4px , rgba(0, 0, 0, 0.09) 0 16px 8px , rgba(0, 0, 0, 0.09) 0 32px 16px;
+
+  /* box-shadow: rgba(95, 194, 140, 0.141)  0 -36px 30px 0 inset ,
+   rgba(0, 0, 0, 0.1) 0 -79px 40px 0 inset ,
+    rgba(0, 0, 0, 0.06) 0 2px 1px ,
+     rgba(0, 0, 0, 0.09) 0 4px 2px ,
+      rgba(0, 0, 0, 0.09) 0 8px 4px ,
+       rgba(0, 0, 0, 0.09) 0 16px 8px ,
+        rgba(0, 0, 0, 0.09) 0 32px 16px; */
   display: flex;
   flex-wrap: wrap;
   height: 120px;

@@ -56,36 +56,35 @@ function FoodsRecipesCard({ getIngredients }) {
   const FIVE = 5;
   return (
     <div className="container-card-recipes-geral">
-      <div className="container-card-recipes">
-        <div className="container-recipes-card-button">
-          <button
-            data-testid="All-category-filter"
-            type="button"
-            onClick={ () => handleClick('All') }
-          >
-            All
+      <div className="container-recipes-card-button">
+        <button
+          data-testid="All-category-filter"
+          type="button"
+          onClick={ () => handleClick('All') }
+        >
+          All
 
-          </button>
-          {categoryList.map((categories, index) => (
-            index < FIVE && (
-              <div
-                key={ categories.strCategory }
+        </button>
+        {categoryList.map((categories, index) => (
+          index < FIVE && (
+            <div
+              key={ categories.strCategory }
+            >
+              <button
+                type="button"
+                data-testid={
+                  `${categories.strCategory}-category-filter`
+                }
+                onClick={ () => handleClick(categories.strCategory) }
+
               >
-                <button
-                  type="button"
-                  data-testid={
-                    `${categories.strCategory}-category-filter`
-                  }
-                  onClick={ () => handleClick(categories.strCategory) }
-
-                >
-                  {categories.strCategory}
-                </button>
-              </div>
-            )
-          ))}
-        </div>
-
+                {categories.strCategory}
+              </button>
+            </div>
+          )
+        ))}
+      </div>
+      <div className="container-card-recipes">
         <div className="container-recipes-card">
           {foodsList.map((food, index) => (
             index < TWELVE && (
