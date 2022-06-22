@@ -257,11 +257,11 @@ iframe {
   height: 18px;
   justify-content: center;
   margin: 5px;
+  position: fixed;
   text-transform: uppercase;
   transition: 100ms all ease;
   width: 230px;
   z-index: 1;
-  position: fixed;
 }
 
 .start-recipe-btn:hover {
