@@ -77,10 +77,10 @@ function Header({ title, toHaveSearch }) {
                 onChange={ handleChangeSearch }
               />
             )}
+          {toHaveSearch && (getFoodsOurDrink === 'foods'
+            ? <SearchBarFoods searchValue={ searchValue } />
+            : <SearchBarDrinks searchValue={ searchValue } />)}
         </div>
-        {toHaveSearch && (getFoodsOurDrink === 'foods'
-          ? <SearchBarFoods searchValue={ searchValue } />
-          : <SearchBarDrinks searchValue={ searchValue } />)}
       </header>
     </div>
   );

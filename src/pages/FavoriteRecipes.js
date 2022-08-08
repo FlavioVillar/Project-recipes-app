@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import MyContext from '../context/Context';
 import Header from '../components/Header';
-// import Footer from '../components/Footer';
+import Footer from '../components/Footer';
 import LinkFavoriteRecipes from '../components/LinkFavoriteRecipes';
 import ShareRecipes from '../components/ShareRecipes';
 
@@ -33,7 +33,7 @@ function FavoriteRecipes() {
   };
 
   return (
-    <div className="container-done-recipes">
+    <div className="container-foods-drinks-header-card-footer">
       <Header title="Favorite Recipes" toHaveSearch={ false } />
       <div className="filter-done-recipes">
         <button
@@ -145,7 +145,7 @@ function FavoriteRecipes() {
           ))}
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

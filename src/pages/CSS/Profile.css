@@ -3,10 +3,8 @@
   background: rgba(240, 255, 246, 0.717);
   display: flex;
   flex-direction: column;
-  height: 540px;
+  height: 100%;
   justify-content: space-evenly;
-  margin-top: 100px;
-  width: 360px;
 }
 
 [ data-testid = 'profile-email' ] {

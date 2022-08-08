@@ -1,11 +1,11 @@
 .login-container {
   align-items: center;
   background: rgb(49, 108, 82);
-  border-radius: 40px;
   display: flex;
-  height: 610px;
+  height: 640px;
   justify-content: center;
-  width: 340px;
+  margin-top: 121px;
+  width: 360px;
 }
 
 .login-form {

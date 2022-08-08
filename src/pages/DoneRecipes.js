@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import Header from '../components/Header';
 import { getStorageDoneRecipes } from '../storage/getStorage';
-// import Footer from '../components/Footer';
+import Footer from '../components/Footer';
 import ShareRecipes from '../components/ShareRecipes';
 import './CSS/DoneRecipes.css';
 
@@ -30,7 +30,7 @@ function DoneRecipes() {
   };
 
   return (
-    <div className="container-done-recipes">
+    <div className="container-foods-drinks-header-card-footer">
       <Header title="Done Recipes" toHaveSearch={ false } />
       <div className="filter-done-recipes">
         <button
@@ -148,7 +148,7 @@ function DoneRecipes() {
           ))}
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

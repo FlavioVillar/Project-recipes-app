@@ -117,7 +117,7 @@ function DrinksInProgress() {
   };
 
   return (
-    <div className="container-id-recipes-geral">
+    <div className="container-foods-drinks-header-card-footer">
       <div className="logo-id-recipes">
         <img
           className="Logo_photo_id_recipes"

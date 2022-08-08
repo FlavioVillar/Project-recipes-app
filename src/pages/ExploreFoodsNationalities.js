@@ -6,6 +6,7 @@ import {
   filterFoodsByNationality, filterRecipesByNationality, listFoodsRecipes,
 } from '../helpers/FoodsAPI';
 import './CSS/Explore.css';
+import './CSS/Foods&Drinks.css';
 
 function ExploreFoodsNationalities() {
   const [getNationality, setNationality] = useState([]);
@@ -42,63 +43,61 @@ function ExploreFoodsNationalities() {
   const TWELVE = 12;
 
   return (
-    <div className="container-explore-foods-drinks">
-      <div className="container-explore-foods-nationality-header-card-footer">
-        <Header title="Explore Nationalities" toHaveSearch />
-        <div className="container-recipes-card-button-nationality">
-          <select
-            className="Select_Nationality"
-            data-testid="explore-by-nationality-dropdown"
-            onChange={ handleSelectCountry }
-          >
-            <option data-testid="All-option">Select Nationality </option>
-            <option data-testid="All-option">All</option>
-            {getNationality.map((country, index) => (
-              <option
-                value={ country }
-                key={ index }
-                data-testid={ `${country}-option` }
-              >
-                {country}
-              </option>))}
-          </select>
-        </div>
-        <div className="container-card-recipes-nationality">
-          <div className="container-recipes-card-nationality">
-            {recipesByNationality.map((food, index) => (
-              index < TWELVE && (
-                <div
-                  className="recipes-card-item"
-                  role="button"
-                  data-testid={ `${index}-recipe-card` }
-                  key={ food.strMeal }
-                  tabIndex={ 0 }
-                  onClick={ () => {
-                    redirectToFoods(food);
-                  } }
-                  onKeyPress={ () => {
-                    redirectToFoods(food);
-                  } }
-                >
-                  <img
-                    data-testid={ `${index}-card-img` }
-                    src={ food.strMealThumb }
-                    alt={ food.strMeal }
-                    className="foods-img"
-                  />
-                  <h3
-                    className="name-recipes-card"
-                    data-testid={ `${index}-card-name` }
-                  >
-                    {food.strMeal}
-
-                  </h3>
-                </div>)
-            ))}
-          </div>
-        </div>
-        <Footer />
+    <div className="container-foods-drinks-header-card-footer">
+      <Header title="Explore Nationalities" toHaveSearch />
+      <div className="container-recipes-card-button-nationality">
+        <select
+          className="Select_Nationality"
+          data-testid="explore-by-nationality-dropdown"
+          onChange={ handleSelectCountry }
+        >
+          <option data-testid="All-option">Select Nationality </option>
+          <option data-testid="All-option">All</option>
+          {getNationality.map((country, index) => (
+            <option
+              value={ country }
+              key={ index }
+              data-testid={ `${country}-option` }
+            >
+              {country}
+            </option>))}
+        </select>
       </div>
+      <div className="container-card-recipes-nationality">
+        <div className="container-recipes-card-nationality">
+          {recipesByNationality.map((food, index) => (
+            index < TWELVE && (
+              <div
+                className="recipes-card-item"
+                role="button"
+                data-testid={ `${index}-recipe-card` }
+                key={ food.strMeal }
+                tabIndex={ 0 }
+                onClick={ () => {
+                  redirectToFoods(food);
+                } }
+                onKeyPress={ () => {
+                  redirectToFoods(food);
+                } }
+              >
+                <img
+                  data-testid={ `${index}-card-img` }
+                  src={ food.strMealThumb }
+                  alt={ food.strMeal }
+                  className="foods-img"
+                />
+                <h3
+                  className="name-recipes-card"
+                  data-testid={ `${index}-card-name` }
+                >
+                  {food.strMeal}
+
+                </h3>
+              </div>)
+          ))}
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

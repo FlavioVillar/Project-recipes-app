@@ -1,32 +1,16 @@
-.container-id-recipes-geral {
-  background: url('/home/flavio/Trybe-projects/sd-019-c-project-recipes-app/src/images/Logo/walpapers.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  height: 560px;
-  justify-content: center;
-
-  /* overflow: hidden; */
-  width: 360px;
-}
-
 .logo-id-recipes {
   align-items: center;
   backdrop-filter: blur(1px);
-  background-color: rgba(221, 221, 221, 0.887);
+  background: rgba(255, 255, 255, 0.859);
   display: flex;
   height: 96px;
-
-  /* overflow: hidden; */
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
 }
 
 .Logo_photo_id_recipes {
-  margin: 0 26px;
+  margin: 6px;
   width: 60px;
 }
 
@@ -38,14 +22,10 @@
 
 .second-id-recipes {
   backdrop-filter: blur(1px);
-  background-color: rgba(221, 221, 221, 0.887);
-  margin-top: 1276px;
+  background: rgba(221, 221, 221, 0.309);
+  overflow-y: scroll;
   padding-bottom: 44px;
 
-  /* overflow-x: scroll; */
-
-  /* overflow-y: scroll; */
-  width: 360px;
 }
 
 /* ! card receita */
@@ -53,7 +33,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  width: 360px;
 }
 
 /* ! Card IMG Nome Share Like */
@@ -164,11 +143,8 @@
 
 /* ! Video */
 iframe {
-  border: none;
-
-  /* box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px ,
-  rgba(0, 0, 0, 0.3) 0 7px 13px -3px ,
-  rgba(0, 0, 0, 0.2) 0 -3px 0 inset; */
+  border: #404040 solid 2px;
+  height: 200px;
 }
 
 /* ! RecomendationCard */
@@ -225,21 +201,9 @@ iframe {
 .container-id-recipes-btn {
   align-items: center;
   background-color: rgb(47, 193, 140);
-  bottom: 0;
-
-  /* box-shadow: rgba(56, 56, 56, 0.059) 0 -23px 25px 0 inset ,
-  rgba(56, 56, 56, 0.08) 0 -36px 30px 0 inset ,
-  rgba(0, 0, 0, 0.1) 0 -79px 40px 0 inset ,
-  rgba(0, 0, 0, 0.06) 0 2px 1px ,
-  rgba(0, 0, 0, 0.09) 0 4px 2px ,
-  rgba(0, 0, 0, 0.09) 0 8px 4px ,
-  rgba(0, 0, 0, 0.09) 0 16px 8px ,
-  rgba(0, 0, 0, 0.09) 0 32px 16px; */
+  border-top: #404040 solid 2px;
   display: flex;
-  height: 50px;
   justify-content: space-around;
-  position: fixed;
-  width: 100%;
 }
 
 .start-recipe-btn {
@@ -247,7 +211,7 @@ iframe {
   background: none;
   border-color: transparent transparent transparent #404040;
   border-style: solid;
-  border-width: 21px 0 21px 38px;
+  border-width: 20px 0 20px 40px;
   bottom: 0;
   color: #404040;
   cursor: pointer;
@@ -257,11 +221,9 @@ iframe {
   height: 18px;
   justify-content: center;
   margin: 5px;
-  position: fixed;
   text-transform: uppercase;
   transition: 100ms all ease;
   width: 230px;
-  z-index: 1;
 }
 
 .start-recipe-btn:hover {
@@ -281,10 +243,6 @@ iframe {
 .container-id-recipe-ingredients-check {
   background-color: rgba(221, 221, 221, 0.707);
   border-radius: 10px;
-
-  /* box-shadow: rgb(49, 108, 82) 0 2px 8px ,
-  rgba(0, 0, 0, 0.3) 0 7px 13px -3px ,
-  rgba(0, 0, 0, 0.2) -4px -4px 12px inset; */
   display: flex;
   flex-direction: column;
   font-size: 16px;
@@ -347,21 +305,9 @@ iframe {
 .container-id-recipes-btn-in-progress {
   align-items: center;
   background-color: rgb(47, 193, 140);
-  bottom: 0;
-
-  /* box-shadow: rgba(56, 56, 56, 0.059) 0 -23px 25px 0 inset ,
-  rgba(56, 56, 56, 0.08) 0 -36px 30px 0 inset ,
-  rgba(0, 0, 0, 0.1) 0 -79px 40px 0 inset ,
-  rgba(0, 0, 0, 0.06) 0 2px 1px ,
-  rgba(0, 0, 0, 0.09) 0 4px 2px ,
-  rgba(0, 0, 0, 0.09) 0 8px 4px ,
-  rgba(0, 0, 0, 0.09) 0 16px 8px ,
-  rgba(0, 0, 0, 0.09) 0 32px 16px; */
+  border-top: #404040 solid 2px;
   display: flex;
-  height: 50px;
   justify-content: space-around;
-  position: fixed;
-  width: 100%;
 }
 
 .finish-recipe-btn-in-progress:disabled {
@@ -369,15 +315,13 @@ iframe {
   border: none;
   border-radius: 12px;
   color: white;
-  cursor: wait;
-  display: block;
+  cursor: pointer;
   filter: opacity(0.5);
-  font-size: 24px;
+  font-size: 18px;
   font-style: italic;
   font-weight: 800;
-  height: 40px;
-  padding: 0 12px;
-  position: relative;
+  height: 42px;
+  margin: 5px 0;
 
 }
 
@@ -387,13 +331,11 @@ iframe {
   border-radius: 12px;
   color: white;
   cursor: pointer;
-  display: block;
-  font-size: 24px;
+  font-size: 18px;
   font-style: italic;
   font-weight: 800;
-  height: 45px;
-  padding: 0 16px;
-  position: relative;
+  height: 42px;
+  margin: 5px 0;
 }
 
 .recipe-done-btn {
@@ -405,7 +347,8 @@ iframe {
   display: block;
   font-size: 14px;
   font-weight: 600;
-  height: 40px;
+  height: 42px;
+  margin: 5px 0;
   padding: 0 16px;
 }
 

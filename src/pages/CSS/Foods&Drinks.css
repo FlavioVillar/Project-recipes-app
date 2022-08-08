@@ -1,15 +1,12 @@
-/* .container-foods-drinks-header-card-footer {
-  align-items: center;
-  background-color: rgb(49, 108, 82);
-  border: none;
-  border-radius: 40px 40px 0 0;
-  box-shadow: none;
+.container-foods-drinks-header-card-footer {
+  background-image: url('/home/flavio/Trybe-projects/sd-019-c-project-recipes-app/src/images/Logo/walpapers.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 16px auto;
-  margin-top: 800px;
-  overflow: hidden;
+  height: 640px;
+  justify-content: space-between;
+  margin-top: 121px;
   width: 360px;
-} */
+}
 

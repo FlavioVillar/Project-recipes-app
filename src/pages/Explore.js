@@ -3,11 +3,12 @@ import { useHistory } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import './CSS/Explore.css';
+import './CSS/Foods&Drinks.css';
 
 function Explore() {
   const history = useHistory();
   return (
-    <div className="container-explore-foods-drinks-header-card-footer">
+    <div className="container-foods-drinks-header-card-footer">
       <Header title="Explore" toHaveSearch={ false } />
       <div className="container-explore-buttons">
         <button

@@ -1,38 +1,20 @@
-.container-done-recipes {
-  align-items: center;
-  background: url('/home/flavio/Trybe-projects/sd-019-c-project-recipes-app/src/images/Logo/walpapers.jpg');
-  background-repeat: no-repeat;
-  background-size: cover , 100px;
-  display: flex;
-  flex-direction: column;
-  height: 560px;
-  overflow: hidden;
-  width: 360px;
-}
-
 .filter-done-recipes {
   backdrop-filter: blur(2px);
   background: rgba(221, 221, 221, 0.309);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 0;
-  position: fixed;
-  top: 100px;
-  width: 360px;
-  z-index: 1;
 }
 
 .second-done-recipes {
   backdrop-filter: blur(1px);
-  background-color: rgba(221, 221, 221, 0.887);
+  background: rgba(221, 221, 221, 0.309);
   display: flex;
   flex-wrap: wrap;
-  height: 560px;
+  height: 100%;
   justify-content: center;
-  margin-top: 130px;
+  overflow-x: hidden;
   overflow-y: scroll;
-  width: 360px;
 }
 
 ::-webkit-scrollbar {
@@ -58,8 +40,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-
-  /* justify-content: space-evenly; */
 }
 
 .card-done-recipes {
@@ -102,8 +82,6 @@
 .container-card-done-recipes-title p {
   margin: 0;
   text-align: center;
-
-  /* padding-left: 10px; */
 }
 
 .recipe-name-done {
@@ -115,14 +93,9 @@
 
 .card-text-done-recipes {
   align-items: center;
-
-  /* background-color: red; */
   color: #404040;
   display: flex;
   flex-direction: column;
-
-
-  /* font-weight: 800; */
   height: 120px;
   justify-content: space-between;
   width: 90px;
@@ -132,9 +105,6 @@
   font-size: 14px;
   font-weight: 800;
   margin: 0;
-
-  /* padding: 10px 0 0; */
-
 }
 
 .tag-done-recipes {
@@ -265,9 +235,8 @@
 }
 
 .card-text-favorite-recipes {
-  align-items: flex-end;
+  align-items: center;
   display: flex;
-  justify-content: center;
 }
 
 .container-share-favorite {
@@ -281,7 +250,7 @@
 }
 
 .card-favorite-recipes {
-  background-color: rgba(221, 221, 221, 0.53);
+  background-color: rgba(221, 221, 221, 0.839);
   border: rgb(95, 194, 140) solid 2px;
   border-radius: 10px;
 
@@ -295,9 +264,11 @@
   display: flex;
   flex-wrap: wrap;
   height: 120px;
-  justify-content: space-between;
+
+  /* justify-content: space-between; */
   margin: 10px;
-  width: 300px;
+
+  /* width: 300px; */
 
 }
 
