@@ -1,4 +1,5 @@
-# Projeto App de receitas cart!
+# Projeto App de receitas!
+![app receita img](/src/images/app_receitas.png) 
 
 Projeto desenvolvido por estudante durante o curso de desenvolvimento front-end da **Trybe**
 
