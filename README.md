@@ -1,8 +1,20 @@
 # Projeto App de receitas!
-![app receita img](/src/images/app_receitas.png) 
+
 
 Projeto desenvolvido por estudante durante o curso de desenvolvimento front-end da **Trybe**
 
+<br />
+
+# Imagens da aplicação
+
+<div align="center">
+ <kbd>
+   <img src="https://user-images.githubusercontent.com/94480963/184560512-a54884b1-7c96-47dd-9f41-4daf530841d6.gif" width="400">
+ </kbd>
+  <kbd>
+  <img src="https://user-images.githubusercontent.com/94480963/184560133-6fe8c73f-da4b-4c77-b07e-270cef69edb6.png" width="250">
+ </kbd>  
+</div>
 <br />
 
 # Tecnologias e ferramentas usadas.
